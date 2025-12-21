@@ -1,0 +1,408 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "🎉IOER HUB | PC/LAPTOP🖥️",
+   LoadingTitle = "Universal IOER HUB",
+   LoadingSubtitle = "BY IOER HUB",
+   ConfigurationSaving = {
+      Enabled = false,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Example Hub"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Universal IOER HUB",
+      Subtitle = "Key System",
+      Note = "https://pastebin.com/Vx1YwgLe",
+      FileName = "KeySystemHub1", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"THERELEASE"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+local MainTab = Window:CreateTab("🏠 Home", nil)
+local Troll = Window:CreateTab("🎯 Main Scripts", nil)
+local Jail = Window:CreateTab("🔒 Jailbreak", nil)
+local MVSD = Window:CreateTab("🔫 MVSD", nil)
+local Stro = Window:CreateTab("💪 The Strongest", nil)
+local Fish = Window:CreateTab("🐟 Fish It", nil)
+local Evade = Window:CreateTab("🏃 Evade", nil)
+local Night = Window:CreateTab("🌲99 Night", nil)
+local Steal = Window:CreateTab("🖐️ Steal A Brainrot", nil)
+local MainSection = MainTab:CreateSection("Main")
+local MainSection = MVSD:CreateSection("No Keyless")
+
+Rayfield:Notify({
+   Title = "Notification Alert",
+   Content = "Thank You For Use This Scripts",
+   Duration = 5,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Okay!",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+},
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Infinite Jump Toggle",
+   Callback = function()
+       --Toggles the infinite jump between on or off on every script run
+_G.infinjump = not _G.infinjump
+
+if _G.infinJumpStarted == nil then
+	--Ensures this only runs once to save resources
+	_G.infinJumpStarted = true
+	
+	--Notifies readiness
+	game.StarterGui:SetCore("SendNotification", {Title="IOER HUB"; Text="Infinite Jump Activated!"; Duration=5;})
+
+	--The actual infinite jump
+	local plr = game:GetService('Players').LocalPlayer
+	local m = plr:GetMouse()
+	m.KeyDown:connect(function(k)
+		if _G.infinjump then
+			if k:byte() == 32 then
+			humanoid = game:GetService'Players'.LocalPlayer.Character:FindFirstChildOfClass('Humanoid')
+			humanoid:ChangeState('Jumping')
+			wait()
+			humanoid:ChangeState('Seated')
+			end
+		end
+	end)
+end
+   end,
+})
+
+local Slider = MainTab:CreateSlider({
+   Name = "WalkSpeed Slider",
+   Range = {1, 350},
+   Increment = 1,
+   Suffix = "Speed",
+   CurrentValue = 16,
+   Flag = "sliderws", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Value)
+   end,
+})
+
+local Slider = MainTab:CreateSlider({
+   Name = "JumpPower Slider",
+   Range = {1, 350},
+   Increment = 1,
+   Suffix = "Speed",
+   CurrentValue = 16,
+   Flag = "sliderjp", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = (Value)
+   end,
+})
+
+local Input = MainTab:CreateInput({
+   Name = "Walkspeed",
+   PlaceholderText = "1-1000",
+   RemoveTextAfterFocusLost = true,
+   Callback = function(Text)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Text)
+   end,
+})
+
+local OtherSection = MainTab:CreateSection("Other")
+
+local Button = MainTab:CreateButton({
+   Name = "Infinite Yield",
+   Callback = function()
+   loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Invisible",
+   Callback = function()
+   loadstring(game:HttpGet('https://pastebin.com/raw/3Rnd9rHf'))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Fly Gui",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/IOERHUB/Fly/refs/heads/main/Gui"))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Test Unc",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/unified-naming-convention/NamingStandard/main/UNCCheckEnv.lua", true))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Ghost Hub",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
+   end,
+})
+
+local OtherSection = Jail:CreateSection("Keyless And Op")
+local Button = Jail:CreateButton({
+   Name = "Rendex Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/ImNotWhyLclc/Rendex/refs/heads/main/Loader.luau"))() 
+   end,
+})
+
+local Button = Jail:CreateButton({
+   Name = "Solix Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/debunked69/Solixreworkkeysystem/refs/heads/main/solix%20new%20keyui.lua"))()
+   end,
+})
+
+local Button = MVSD:CreateButton({
+   Name = "Zephyr-V2",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/TheRealAvrwm/Zephyr-V2/refs/heads/main/ZephyrV2", true))()
+   end,
+})
+
+local Button = MVSD:CreateButton({
+   Name = "ProjectSnare",
+   Callback = function()
+   loadstring(game:HttpGet("https://scripts.projectsnare.net/SnareMvsd", true))()
+   end,
+})
+
+local MainSection = MVSD:CreateSection("Keyless")
+local Button = MVSD:CreateButton({
+   Name = "Ekuve Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/ekuve/ekuvehub/main/main.lua"))()
+   end,
+})
+
+local Button = Stro:CreateButton({
+   Name = "Trash Can",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/yes1nt/yes/refs/heads/main/Trashcan%20Man",true))()
+   end,
+})
+
+local Button = Stro:CreateButton({
+   Name = "Divene Form Emote",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/IdkRandomUsernameok/PublicAssets/refs/heads/main/Releases/MUI.lua"))()
+   end,
+})
+
+local MainSection = Stro:CreateSection("GUI")
+local Button = Stro:CreateButton({
+   Name = "Dovi Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/needanewphone32-eng/tsbfiles/refs/heads/main/Main1.lua"))()
+   end,
+})
+
+local MainSection = Fish:CreateSection("Main")
+local Button = Fish:CreateButton({
+   Name = "Bloxy Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/fcc63f5f04efa9a6a85d6f16a179b870.lua"))()
+   end,
+})
+
+local Button = Fish:CreateButton({
+   Name = "Legend Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/iyYc5zds"))()
+   end,
+})
+
+local Button = Fish:CreateButton({
+   Name = "Rock Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://rockhub.net/beta/main.lua"))()
+   end,
+})
+
+local Button = Fish:CreateButton({
+   Name = "Limit Hub",
+   Callback = function()
+   loadstring(game:HttpGet(('https://raw.githubusercontent.com/FakeModz/LimitHub/refs/heads/main/LimitHub_Luarmor_E.lua')))()
+   end,
+})
+
+local MainSection = Fish:CreateSection("Main2")
+local Button = Fish:CreateButton({
+   Name = "Sora Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/elainaceles/SoraHub/refs/heads/main/fishhit.lua"))()
+   end,
+})
+
+local Button = Fish:CreateButton({
+   Name = "Sanz Hub",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/DyyITT/SansMobaHub/refs/heads/main/Fishit-Free'))()
+   end,
+})
+
+local Button = Fish:CreateButton({
+   Name = "Vikai Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/vinxonez/ViKai-HUB/refs/heads/main/loader"))()
+   end,
+})
+
+local Button = Fish:CreateButton({
+   Name = "Lexs Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/albibot69-lgtm/Lexs/refs/heads/main/Loader/Main.lua"))()
+   end,
+})
+
+local Button = Fish:CreateButton({
+   Name = "Blessed Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/iyYc5zds"))()
+   end,
+})
+
+local MainSection = Evade:CreateSection("Main")
+local Button = Evade:CreateButton({
+   Name = "Iliankytb Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Iliankytb/Iliankytb/main/NewbestEvadeCheat"))()
+   end,
+})
+
+local Button = Evade:CreateButton({
+   Name = "kasra50 Hub",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/kasra50/Idk/refs/heads/main/I%20mean%20nobody%20can%20stop%20me.txt'))()
+   end,
+})
+
+local Button = Evade:CreateButton({
+   Name = "LabyCatUser Hub",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/LabyCatUser/rawr/refs/heads/main/evade.lua'))()
+   end,
+})
+
+local MainSection = Evade:CreateSection("Keyless And OP")
+local Button = Evade:CreateButton({
+   Name = "Best Evade #1",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Evade-Evade-The-Best-Free-GUI-Script-lots-of-Features-20718"))()
+   end,
+})
+
+local MainSection = Night:CreateSection("Keyless And OP")
+local Button = Night:CreateButton({
+   Name = "Overpower",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/CgiJB7mR"))()
+   end,
+})
+
+local Button = Night:CreateButton({
+   Name = "Soluna",
+   Callback = function()
+   loadstring(game:HttpGet("https://soluna-script.vercel.app/99-Nights-in-the-Forest.lua",true))()
+   end,
+})
+
+local Button = Night:CreateButton({
+   Name = "RiftHub",
+   Callback = function()
+   loadstring(game:HttpGet("https://rifton.top/loader.lua"))()
+   end,
+})
+
+local MainSection = Troll:CreateSection("Main")
+local Button = Troll:CreateButton({
+   Name = "Super Ring V6",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/hhyT3gQr"))()
+   end,
+})
+
+local Button = Troll:CreateButton({
+   Name = "No Cooldown Click",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/5qXz6a5L"))()
+   end,
+})
+
+local Button = Troll:CreateButton({
+   Name = "Tool Giver",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub-Backup/main/gametoolgiver.lua"))()
+   end,
+})
+
+local Button = Troll:CreateButton({
+   Name = "God Mode",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/zephyr10101/ignore-touchinterests/main/main",true))()
+   end,
+})
+
+local MainSection = Troll:CreateSection("Anti Troll")
+local Button = Troll:CreateButton({
+   Name = "Anti-TP",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/VttTZyrT"))()
+   end,
+})
+
+local Button = Troll:CreateButton({
+   Name = "Anti-Fling",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/MhJDcWjR"))()
+   end,
+})
+
+local MainSection = Steal:CreateSection("Esp And More")
+local Button = Steal:CreateButton({
+   Name = "Steal A Brainrot",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastefy.app/HwHqIU1n/raw"))()
+   end,
+})
+
+local Button = Steal:CreateButton({
+   Name = "Vulkan Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/ily123950/Vulkan/refs/heads/main/Tr"))()
+   end,
+})
+
+local MainSection = Steal:CreateSection("Overpower Scripts")
+local Button = Steal:CreateButton({
+   Name = "Chili Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/tienkhanh1/spicy/main/Chilli.lua"))()
+   end,
+})
+
+local Button = Steal:CreateButton({
+   Name = "Blaze Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Makuscripts/Steal-A-Brainrot/refs/heads/main/BlazeHub"))()
+   end,
+})
+
+
+print("IOER HUB PC/LAPTOP loaded Successfully, Thanks for Using this script!")
+print("Created By IOER Hub, pastebin.com/u/ty4rds")
