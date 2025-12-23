@@ -35,6 +35,8 @@ local Fish = Window:CreateTab("🐟 Fish It", nil)
 local Evade = Window:CreateTab("🏃 Evade", nil)
 local Night = Window:CreateTab("🌲99 Night", nil)
 local Steal = Window:CreateTab("🖐️ Steal A Brainrot", nil)
+local Blade = Window:CreateTab("⚽ Blade Ball", nil)
+local Donate = Window:CreateTab("💵 Pls Donate", nil)
 local MainSection = MainTab:CreateSection("Main")
 local MainSection = MVSD:CreateSection("No Keyless")
 
@@ -403,6 +405,56 @@ local Button = Steal:CreateButton({
    end,
 })
 
+local MainSection = Blade:CreateSection("Free Scripts")
+local Button = Blade:CreateButton({
+   Name = "Kaitor Blade Ball",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/redopy7/Blade-Ball/refs/heads/main/Kalitor"))()
+   end,
+})
+
+local Button = Blade:CreateButton({
+   Name = "Argon Blade Ball",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/AgentX771/ArgonHubX/main/Loader.lua"))()
+   end,
+})
+
+local MainSection = Donate:CreateSection("Steal Robux And More")
+local Button = Donate:CreateButton({
+   Name = "MoziIHub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/MoziIOnTop/MoziIHub/refs/heads/main/PlsDonate"))()
+   end,
+})
+
+local Button = Donate:CreateButton({
+   Name = "Vax3478 Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Vax3478/Vax/refs/heads/main/plsdonatescriptkeyless-dash"))()
+   end,
+})
+
+local Button = Donate:CreateButton({
+   Name = "Overpower #1",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastefy.app/djoI9rG6/raw"))()
+   end,
+})
+
+local Button = Donate:CreateButton({
+   Name = "Ifneopldnonea Hub",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/Ifneopldnonea/Unilop/refs/heads/main/Script'))()
+   end,
+})
+
+local Button = Donate:CreateButton({
+   Name = "Overpower #2",
+   Callback = function()
+   loadstring(game:HttpGet('https://paste.rs/lYV4i'))()
+   end,
+})
 
 print("IOER HUB PC/LAPTOP loaded Successfully, Thanks for Using this script!")
 print("Created By IOER Hub, pastebin.com/u/ty4rds")
