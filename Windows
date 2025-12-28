@@ -169,7 +169,7 @@ local Button = MVSD:CreateButton({
 local Button = MVSD:CreateButton({
    Name = "ProjectSnare",
    Callback = function()
-   loadstring(game:HttpGet("https://scripts.projectsnare.net/SnareMvsd", true))()
+   loadstring(game:HttpGet("https://scripts.projectsnare.online/SnareMvsd", true))()
    end,
 })
 
