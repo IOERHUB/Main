@@ -24,6 +24,7 @@ local Blade = Window:CreateTab("⚽ Blade Ball", nil)
 local Donate = Window:CreateTab("💵 Pls Donate", nil)
 local Area = Window:CreateTab("👽 Area 51", nil)
 local Smile = Window:CreateTab("😄 Infection Smile", nil)
+local Next = Window:CreateTab("⏩ Next >>", nil)
 local MainSection = MainTab:CreateSection("Main")
 local MainSection = MVSD:CreateSection("No Keyless")
 
@@ -508,6 +509,14 @@ local Button = Smile:CreateButton({
    end,
 })
 
+local MainSection = Next:CreateSection("Next Scripts IOER Hub")
+local Paragraph = Next:CreateParagraph({Title = "⏩ Next Tab", Content = "Click Script For Next Tab, More Scripts Coming Soon!"})
+local Button = Next:CreateButton({
+   Name = "Next>> - IOERHUB",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/IOERHUB/IOER-HUB-V2/refs/heads/main/Version%20V2"))()
+   end,
+})
 
-print("IOER HUB PC/LAPTOP loaded Successfully, Thanks for Using this script!")
+print("IOER HUB Main Scripts loaded Successfully, Thanks for Using this script!")
 print("Created By IOER Hub, pastebin.com/u/ty4rds")
