@@ -1,7 +1,7 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "🎉IOER HUB | Main Scripts🖥️📱",
+   Name = "🎉 IOER HUB | Main Scripts 🖥️📱",
    LoadingTitle = "Universal IOER HUB",
    LoadingSubtitle = "BY IOER HUB",
    ConfigurationSaving = {
@@ -98,7 +98,7 @@ local Slider = MainTab:CreateSlider({
 
 local Input = MainTab:CreateInput({
    Name = "Walkspeed",
-   PlaceholderText = "1-1234",
+   PlaceholderText = "1-1500",
    RemoveTextAfterFocusLost = true,
    Callback = function(Text)
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Text)
