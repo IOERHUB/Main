@@ -197,11 +197,25 @@ local Button = Stro:CreateButton({
    end,
 })
 
-local MainSection = Stro:CreateSection("GUI")
+local MainSection = Stro:CreateSection("Script Auto Combo")
 local Button = Stro:CreateButton({
    Name = "Dovi Hub",
    Callback = function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/needanewphone32-eng/tsbfiles/refs/heads/main/Main1.lua"))()
+   end,
+})
+
+local Button = Stro:CreateButton({
+   Name = "VexonHub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/DiosDi/VexonHub/refs/heads/main/VexonHub"))()
+   end,
+})
+
+local Button = Stro:CreateButton({
+   Name = "CombosRemake",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Cyborg883/CombosRemake/refs/heads/main/Script"))()
    end,
 })
 
