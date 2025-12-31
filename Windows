@@ -30,7 +30,7 @@ Rayfield:Notify({
 })
 
 local MainSection = Back:CreateSection("Down IOER Hub")
-local Paragraph = Back:CreateParagraph({Title = "❌ | announcement", Content = "IOER HUB Down, Please Wait Until Update"})
+local Paragraph = Back:CreateParagraph({Title = "🔴 | Status", Content = "IOER HUB Down, Please Wait Until Update"})
 local MainSection = Back:CreateSection("Testing Version")
 local Paragraph = Back:CreateParagraph({Title = "‼️ | Checking Version", Content = "Code Erorr: 404, Checking Version....."})
 local Paragraph = Back:CreateParagraph({Title = "⛔ | V1.2.50", Content = "String: 0x1a24f7d9080"})
