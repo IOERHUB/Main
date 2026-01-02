@@ -175,7 +175,7 @@ local Button = MVSD:CreateButton({
    end,
 })
 
-local MainSection = Stro:CreateSection("Overpower Scripts")
+local MainSection = Stro:CreateSection("Main Scripts")
 local Paragraph = Stro:CreateParagraph({Title = "⚠️ Information", Content = "Use Executor 99/100% For Experience"})
 local Button = Stro:CreateButton({
    Name = "Trash Can",
@@ -191,7 +191,14 @@ local Button = Stro:CreateButton({
    end,
 })
 
-local MainSection = Stro:CreateSection("Script Auto Combo")
+local Button = Stro:CreateButton({
+   Name = "CombosRemake",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Cyborg883/CombosRemake/refs/heads/main/Script"))()
+   end,
+})
+
+local MainSection = Stro:CreateSection("Main Interface")
 local Button = Stro:CreateButton({
    Name = "Dovi Hub",
    Callback = function()
@@ -207,9 +214,9 @@ local Button = Stro:CreateButton({
 })
 
 local Button = Stro:CreateButton({
-   Name = "CombosRemake",
+   Name = "Nicuse Hub",
    Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/Cyborg883/CombosRemake/refs/heads/main/Script"))()
+   loadstring(game:HttpGet("https://loader.nicuse.xyz"))()
    end,
 })
 
@@ -524,6 +531,3 @@ local Button = Back:CreateButton({
    loadstring(game:HttpGet("https://raw.githubusercontent.com/IOERHUB/CHOOSE/refs/heads/main/IOERHUB%20CHOOSE"))()
    end,
 })
-
-print("IOER HUB Main Scripts loaded Successfully, Thanks for Using this script!")
-print("Created By IOER Hub, pastebin.com/u/ty4rds")
