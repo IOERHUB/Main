@@ -25,6 +25,8 @@ local Blade = Window:CreateTab("⚽ Blade Ball", nil)
 local Donate = Window:CreateTab("💵 Pls Donate", nil)
 local Area = Window:CreateTab("👽 Area 51", nil)
 local Smile = Window:CreateTab("😄 Infection Smile", nil)
+local Peta = Window:CreateTab("😡 Peta-Peta", nil)
+
 local MainSection = MainTab:CreateSection("Main")
 local MainSection = MVSD:CreateSection("No Keyless")
 
@@ -531,3 +533,20 @@ local Button = Back:CreateButton({
    loadstring(game:HttpGet("https://raw.githubusercontent.com/IOERHUB/CHOOSE/refs/heads/main/IOERHUB%20CHOOSE"))()
    end,
 })
+
+local MainSection = Peta:CreateSection("Main Scripts")
+local Paragraph = Peta:CreateParagraph({Title = "⚠️ Information", Content = "Only Work in Peta-Peta Chapter 1"})
+local Button = Peta:CreateButton({
+   Name = "Peta-Peta UI",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/CeoOfDims/Peta/refs/heads/main/Petapeta.lua'))()
+   end,
+})
+
+local Button = Peta:CreateButton({
+   Name = "Auto Farm",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/ZxsfJ54F"))()
+   end,
+})
+
